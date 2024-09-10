@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    {{task.title}}
+    <p>Created by: {{task.user}}</p>
+    {{task.description}}
+    
+</div>
+<div>
+<p>Created at {{task.created_at}} <span>Due by {{task.due_date}}</span> <span>Priority: {{task.priority}}</span></p>
+</div>
+<div>
+    <a href="{% url 'task_edit' task.pk %}">Edit Task</a>
+    <a href="{% url 'task_delete' task.pk %}">Delete Task</a>
+</div>
+
+
+{% endblock content %}
