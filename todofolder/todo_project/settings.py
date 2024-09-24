@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y_3lk2qq_mfiey#^w_r9+afe1q0j%^%egek9q(i1(p6j40mi@j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True #c
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://boltworkslab.pythonanywhere.com/', 'http://127.0.0.1:8000']  #write the local host, python anywhere host and any other host project
 
 
 # Application definition
@@ -119,6 +119,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = "allstatic"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
